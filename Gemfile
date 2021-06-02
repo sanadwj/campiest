@@ -35,6 +35,7 @@ end
 
 group :development do
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
+  gem 'rspec-rails'
   gem 'web-console', '>= 4.1.0'
   # Display performance information such as SQL time and flame graphs for each request in your browser.
   # Can be configured to work on production as well see: https://github.com/MiniProfiler/rack-mini-profiler/blob/master/README.md
@@ -44,5 +45,31 @@ group :development do
   gem 'spring'
 end
 
+group :test do
+  # Adds support for Capybara system testing and selenium driver
+  gem 'capybara', '>= 2.15'
+  gem 'selenium-webdriver'
+  gem 'shoulda-matchers', require: false
+  # Easy installation and use of web drivers to run system tests with browsers
+  gem 'webdrivers'
+end
+
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+gem 'devise', '~> 4.8', '>= 4.8.0'
+gem 'devise_masquerade', '~> 1.3'
+gem 'font-awesome-sass', '~> 5.15'
+gem 'friendly_id', '~> 5.4'
+gem 'image_processing'
+gem 'activeadmin'
+gem 'mini_magick', '~> 4.10', '>= 4.10.1'
+gem "active_delivery"
+gem 'omniauth-facebook', '~> 8.0'
+gem 'omniauth-github', '~> 2.0'
+gem 'omniauth-google-oauth2'
+gem 'pundit', '~> 2.1'
+gem 'redis', '~> 4.2', '>= 4.2.2'
+gem 'sidekiq', '~> 6.2'
+gem 'rubocop'
+gem 'faker'
